@@ -1,0 +1,12 @@
+body {
+  background-color: green;
+}
+
+.image-container {
+  position: absolute;
+}
+
+img {
+  width: 10em;
+  height: auto;
+}
