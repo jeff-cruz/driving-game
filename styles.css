@@ -11,14 +11,26 @@ img {
   height: auto;
 }
 
+.rotate-none {
+  transform: rotate(0deg);
+  transition: transform;
+  transition-duration: 0.3s;
+}
+
 .rotate-left {
   transform: rotate(-90deg);
+  transition: transform;
+  transition-duration: 0.3s;
 }
 
 .rotate-right {
   transform: rotate(90deg);
+  transition: transform;
+  transition-duration: 0.3s;
 }
 
 .rotate-opposite {
   transform: rotate(180deg);
+  transition: transform;
+  transition-duration: 0.3s;
 }
