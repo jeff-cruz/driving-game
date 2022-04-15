@@ -10,3 +10,15 @@ img {
   width: 10em;
   height: auto;
 }
+
+.rotate-left {
+  transform: rotate(-90deg);
+}
+
+.rotate-right {
+  transform: rotate(90deg);
+}
+
+.rotate-opposite {
+  transform: rotate(180deg);
+}
