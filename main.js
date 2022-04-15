@@ -1,8 +1,9 @@
 var carModel = {
   x: null,
-  y: null
+  y: null,
+  carMoving: false
 };
-
+var intervalID;
 var $car = document.querySelector('.image-container');
 
 window.addEventListener('keydown', handleDirection);
@@ -19,8 +20,12 @@ function handleDirection(event) {
   if (event.key === 'ArrowUp') {
     $car.className = 'image-container rotate-left';
   }
-  if (event.key === ' ') {
-    var intervalID = setInterval(startCar, 16);
+  if (event.key === ' ' && carModel.carMoving === false) {
+    intervalID = setInterval(startCar, 16);
+    carModel.carMoving = true;
+  } else if (event.key === ' ' && carModel.carMoving === true) {
+    clearInterval(intervalID);
+    carModel.carMoving = false;
   }
 }
 
